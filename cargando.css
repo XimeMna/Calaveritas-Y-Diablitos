@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lalezar&family=Luckiest+Guy&family=Outfit&family=Piedra&family=Ranchers&family=Salsa&display=swap');
+
+.ranchers-regular,.salsa-regular,.piedra-regular,.luckiest-guy-regular{
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ranchers-regular {
+    font-family: "Ranchers", sans-serif;
+}
+.salsa-regular {
+    font-family: "Salsa", cursive;
+}
+.piedra-regular {
+    font-family: "Piedra", serif;
+}
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+}
+   
+body{
+    background-color: #1C0E3B;
+    border: 0;
+    margin: 0;
+    user-select: none;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+}
+
+img{
+    filter: brightness(1.1) contrast(1.1) saturate(1.1); 
+}
+
+.horizontal{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+}
+.horizontal label,.horizontal .craneo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.horizontal label{
+    font-size: 4vw;
+    top: 35%;
+    font-family: "Ranchers", sans-serif;
+    color: #fff;
+}
+.horizontal .craneo{
+    width: 25vh;
+    top: 60%;
+    border-radius: 20%;
+}
+.horizontal .marco{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    top: 0;
+}
+@media only screen and (orientation: landscape) {
+        .horizontal{
+            display: flex;
+            position: fixed;
+        }
+        body{
+            overflow: hidden;
+        }
+        
+    }
+
+
+.papelpicado{
+    width: 100%;
+    position: absolute;
+    top: -2%;
+}
+
+.marco{
+    width: 55vw;
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%,-50%);
+}
+.c_marco{
+    width: 46vw;
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%,-50%);
+    height: 30vw;
+    text-align: center;
+    font-family: "Salsa", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.altar{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+    width: 65vw;
+}
+
+.cargando{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #2E073F;
+    height: 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cargando label{
+    color: #fff;
+    font-size: 4vw;
+    font-family: "Ranchers", sans-serif;
+    margin-right: 20px;
+}
+.cargando img{
+    width: 7vw;
+    border-radius:100%;
+}
+
+h1{
+    color: #fff;
+    position: absolute;
+    font-size: 3vw;
+}
+
+#imagen{
+    width: 15vw;
+    position: fixed;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+
+
+    @media only screen and (max-width: 767px){
+        .papelpicado{
+            top: 0%;
+        }
+        
+        .marco{
+            width: 80%;
+            top: 30%;
+        }
+
+        .c_marco{
+            width: 68%; 
+            left: 50%;
+            top: 30%;
+            height: 30vw;
+        }
+        h1{
+            font-size: 4vw;
+        }
+        .altar{
+            width: 90%;
+        }
+        .cargando label{ 
+            font-size: 5vw;
+        }
+        .cargando img{
+            width: 8vw;
+           
+        }
+        #imagen{
+            width: 20vw;
+            top: 53%;
+        }
+    }
+
+    @media only screen and (min-width: 834px) and (max-width: 1366px){
+        #imagen{
+            top: 50%;
+        }
+    }

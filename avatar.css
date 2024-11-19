@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lalezar&family=Luckiest+Guy&family=Outfit&family=Piedra&family=Ranchers&family=Salsa&display=swap');
+
+.ranchers-regular,.salsa-regular,.piedra-regular,.luckiest-guy-regular{
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ranchers-regular {
+    font-family: "Ranchers", sans-serif;
+}
+.salsa-regular {
+    font-family: "Salsa", cursive;
+}
+.piedra-regular {
+    font-family: "Piedra", serif;
+}
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+}
+   
+body{
+    background-color: #1C0E3B;
+    border: 0;
+    margin: 0;
+    user-select: none;
+    letter-spacing: 0.2em;
+    background-image: url(Imagenes/fondo.png);
+    background-size: cover;
+}
+
+img{
+    filter: brightness(1.1) contrast(1.1) saturate(1.1); 
+}
+
+.horizontal{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+    top: 0;
+}
+.horizontal label,.horizontal .craneo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.horizontal label{
+    font-size: 4vw;
+    top: 35%;
+    font-family: "Ranchers", sans-serif;
+    color: #fff;
+}
+.horizontal .craneo{
+    width: 25vh;
+    top: 60%;
+    border-radius: 20%;
+}
+.horizontal .marco{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+@media only screen and (orientation: landscape) {
+        .horizontal{
+            display: flex;
+            position: fixed;
+        }
+        body{
+            overflow: hidden;
+        }
+        
+    }
+
+
+h1{
+    color: #fff;
+    font-family: "Ranchers", sans-serif;
+    font-size: 8vw;
+    text-align: center;
+    margin-top: 10vw;
+    margin-bottom: 0;
+}
+
+.avatares {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    gap: 5vw;
+    padding: 2vw;
+    max-width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+}
+
+.avatar {
+    position: relative;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+} 
+.avatar::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(transparent, #fff, transparent 30%);
+    animation: rotate 5s linear infinite;
+}
+.avatar::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 28vw;
+    height: 28vw;
+    background-color: #1C0E3B;
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.avatar .marco {
+    width: 100%;
+    height: auto;
+    max-width: 29vw; 
+}
+
+.avatares .avatar:last-child {
+    grid-column: span 2; 
+    justify-self: center;
+}
+
+.icon{
+    position: fixed;
+    width: 30%;
+    z-index: -1;
+}
+
+
+.salir{
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    width: 10vw;
+    transform: rotate(180deg);
+    opacity: 30%;
+}
+
+    @media only screen and (max-width: 767px){
+        .avatares {
+            grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+            max-width: 90%;
+        }
+        
+        .avatar .marco {
+            max-width: 40vw; 
+        }
+        h1{
+            margin-top: 15vw;
+            font-size: 10vw;
+        }
+        .salir{
+            width: 13vw;
+        }
+        .avatar::after {
+            width: 38vw;
+            height: 38vw;
+        }
+    }

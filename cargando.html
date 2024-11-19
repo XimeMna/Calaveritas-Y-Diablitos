@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calaveritas y Diablitos</title>
+    <link rel="stylesheet" href="cargando.css">
+</head>
+<body> 
+    <div class="horizontal">
+        <label>Gira tu dispositivo</label>
+        <img src="Imagenes/craneo.gif" class="craneo">
+        <img src="Imagenes/marco1.jpg" class="marco"> 
+    </div>
+
+    <img src="Imagenes/papel_picado2.png" class="papelpicado">
+
+    <img src="Imagenes/marco1.jpg" class="marco">
+    <div class="c_marco"><h1>En el Día de Muertos, la muerte se viste de colores y recuerdos. No hay terror, solo el eco de las almas que amamos.</h1></div>
+    
+
+    <img src="Imagenes/altar2.png" class="altar">
+    <img id="imagen" alt="Imagen">
+
+
+    <div class="cargando">
+        <label>Cargando...</label>
+        <img src="Imagenes/pan-de-muerto.gif">
+    </div>
+
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        const icon = params.get('imagen');
+        const nombre = params.get('nombre');
+
+        if (icon) {
+            document.getElementById('imagen').src = icon;
+        }
+
+        setTimeout(function() {
+            window.location.href = `ruleta.html?imagen=${encodeURIComponent(icon)}&nombre=${encodeURIComponent(nombre)}`;
+        }, 10000);
+
+        const moustros = new Audio('sonidos/monstruos_tontos.mp3');
+        moustros.play();
+        moustros.loop = true;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calaveritas y Diablitos</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div class="horizontal">
+        <label>Gira tu dispositivo</label>
+        <img src="Imagenes/craneo.gif" class="craneo">
+        <img src="Imagenes/marco1.jpg" class="marco">
+    </div>
+
+    <img src="Imagenes/F_1.png" class="uno">
+    
+    <img src="Imagenes/F_2.png" class="dos">
+    
+    <img src="Imagenes/F_3.png" class="tres">
+    
+    <img src="Imagenes/F_4.png" class="cuatro"> 
+
+    <h1>Hoy no es un adiós, solo un hasta luego.</h1>
+    <h1> ¡Vuelve cuando quieras enfrentar la ruleta!</h1>
+
+
+    <script>
+        let lastTouch = 0;
+
+        function inicio() {
+            window.location.href = "index.html"; 
+        }
+
+        document.addEventListener("touchend", function() {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTouch;
+            if (tapLength < 300 && tapLength > 0) { 
+                inicio();
+            }
+            lastTouch = currentTime;
+        });
+
+    </script>
+</body>
+</html>

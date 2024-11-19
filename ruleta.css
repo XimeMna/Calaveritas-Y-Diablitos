@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lalezar&family=Luckiest+Guy&family=Outfit&family=Piedra&family=Ranchers&family=Salsa&display=swap');
+
+.ranchers-regular,.salsa-regular,.piedra-regular,.luckiest-guy-regular{
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ranchers-regular {
+    font-family: "Ranchers", sans-serif;
+}
+.salsa-regular {
+    font-family: "Salsa", cursive;
+}
+.piedra-regular {
+    font-family: "Piedra", serif;
+}
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+}
+   
+body{
+    background-color: #1C0E3B;
+    border: 0;
+    margin: 0;
+    user-select: none;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+}
+
+img{
+    filter: brightness(1) contrast(1) saturate(1); 
+}
+
+.horizontal{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+}
+.horizontal label,.horizontal .craneo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.horizontal label{
+    font-size: 4vw;
+    top: 35%;
+    font-family: "Ranchers", sans-serif;
+    color: #fff;
+}
+.horizontal .craneo{
+    width: 25vh;
+    top: 60%;
+    border-radius: 20%;
+}
+.horizontal .marco{
+    width: 100%;
+    height: 100%; 
+    margin: 0;
+    z-index: -1;
+    top: 0;
+}
+@media only screen and (orientation: landscape) {
+        .horizontal{
+            display: flex;
+            position: fixed;
+        }
+        body{
+            overflow: hidden;
+        }
+        
+    }
+
+.papel_picado{
+    width: 100%;
+    position: absolute;
+    top: -8%;
+    opacity: 80%;
+}
+
+.contenedor_ruleta{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#indicador{
+    position: absolute;
+    display: inline-block;
+    width: 0%;
+    height: 0%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #f2f2f2;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    top: -20px;
+    opacity: 0;
+}
+.contenedor_boton{
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%);
+    
+}
+.contenedor_boton button{
+    border: none;
+    outline: none;
+    position: absolute;
+    width: 25vw;
+    height: 15vw;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    font-size: 5vw;
+    color: #fff;
+    background-color: #FF6500;
+    font-family: "Luckiest Guy", cursive;
+    border: none;
+    z-index: 1000;
+    
+
+}
+
+
+#ruleta{
+    position: relative;
+    width: 70vw;
+    height: 70vw;
+    font-size: 14px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 2vw solid #fff;
+    color: #fff;
+    letter-spacing: 0.1em;
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 15px white);
+}
+
+#ruleta .seccion{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+    overflow: hidden;
+   
+}
+
+#ruleta .seccion:nth-child(1) {
+    transform: rotate(0deg) skewY(-38.57deg);
+}
+#ruleta .seccion:nth-child(2) {
+    transform: rotate(51.43deg) skewY(-38.57deg);
+}
+#ruleta .seccion:nth-child(3) {
+    transform: rotate(102.86deg) skewY(-38.57deg);
+}
+#ruleta .seccion:nth-child(4) {
+    transform: rotate(154.29deg) skewY(-38.57deg);
+}
+#ruleta .seccion:nth-child(5) {
+    transform: rotate(205.71deg) skewY(-38.57deg);
+}
+#ruleta .seccion:nth-child(6) {
+    transform: rotate(257.14deg) skewY(-38.57deg);
+}
+#ruleta .seccion:nth-child(7) {
+    transform: rotate(308.57deg) skewY(-38.57deg);
+}
+
+#ruleta .seccion .contenido{
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%; 
+    text-align: center;
+    padding-top: 20px;
+    transform: skewY(38.57deg) rotate(25.71deg);
+    font-size: 3vw;
+    font-family: "Luckiest Guy", cursive;
+}
+
+
+.chocolate{
+    background-color: #4d215f;
+}
+
+.muerte {
+    background-color: #779d40;
+}
+
+.descuento{
+    background-color: #cc257c;
+}
+
+.muerte2{
+    background-color: #f9ad0b;
+}
+
+.giro{
+    background-color: #107195;
+}
+
+.muerte3{
+    background-color: #e62e2d;
+}
+
+.toppings{
+    background-color: #eb591a;
+}
+
+.girar { 
+    transform: rotate(1440deg);
+}
+
+.iconos{
+    width: 10vw;
+}
+
+.indicador{
+    width: 25vw;
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%);
+    z-index: 1;
+    filter: drop-shadow(0 0 5px white) drop-shadow(0 0 15px white);
+}
+
+.C_1, .C_2{
+    position: absolute;
+    bottom: 0;
+    width: 35vw;
+    z-index: -1;
+    opacity: 80%;
+}
+.C_2{
+    right: 0;
+}
+.C_centro{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%);
+    z-index: 1;
+    width: 18vw;
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 15px white);
+    
+}
+
+.resultado {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    position: fixed; 
+    z-index: 5; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    display: none;
+}
+
+#descuento #titulo{
+    font-size: 8vw;
+    text-align: center;
+    margin-top: 5%;
+    font-family: "Ranchers", sans-serif;
+}
+#descuento .boleto {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 65vw;
+    /* animation: destello-externo 2s infinite; */
+    
+}
+.ajolote{
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    z-index: 1;
+    /* animation: destello-externo 2s infinite; */
+}
+#descuento #des{
+    position: absolute;
+    font-family: "Ranchers", sans-serif;
+    font-size: 11vw;    
+    width: 20vw;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+/* 
+
+@keyframes destello {
+   
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+} */
+@keyframes destello-externo {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+    }
+}
+
+
+.marco_giro{
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 80%;
+
+}
+
+.parca{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40vw;
+    animation: elevar 2s ease-in-out;
+}
+
+#giro h1{
+    position: absolute;
+    font-size: 4vw;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    top: 13%;
+    font-family: "Ranchers", sans-serif;
+    letter-spacing: 0.1em;
+}
+
+#giro button{
+    position: absolute;
+    width: 50vw;
+    height: 12vw;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    font-size: 5vw;
+    background-color: #E72C41;
+    color: #fff;
+    font-family: "Luckiest Guy", cursive;
+    border-radius: 50px;
+    border: none;
+}
+
+.cuadro{
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    background-color: #14040b;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%,-50%);
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 8px white);
+    border: 5px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_cuadro{
+    font-size: 6vw;
+    font-family: "Ranchers", sans-serif;
+    text-align: center;
+    width: 90%;
+    height: fit-content;
+    margin-top: 8%;
+    /* animation: destello 2s infinite; */
+
+}
+
+.img_ganado{
+    position: absolute;
+    width: 28vw;
+    top: 32%;
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 3px white);
+}
+
+.gif{
+    position: absolute;
+    width: 60vw;
+    bottom: 0;
+    filter: none; 
+    z-index: -2;
+    border-radius: 20px;
+}
+.salir{
+    position: absolute;
+    width: 10vw;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 1%;
+    opacity: 60%;
+    z-index: 10;
+}
+
+.destello{
+    position: absolute;
+    top: 15%;
+    width: 62vw;
+    z-index: -1;
+    filter: drop-shadow(0 0 2px white) drop-shadow(0 0 10px white);
+}
+  
+
+.titulo_muerte{
+    font-size: 10vw;
+    text-align: center;
+    font-family: "Ranchers", sans-serif;
+}
+
+.txt_muerte{
+    font-size: 5vw;
+    text-align: center;
+    font-family: "Ranchers", sans-serif;
+    color: #C4C6C7;
+}
+
+.tumba{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 85vw;
+}
+
+.parca2 {
+    position: absolute;
+    bottom: 33%;
+    left: 50%;
+    transform: translateX(-50%); /* Solo centra horizontalmente */
+    width: 45vw;
+    z-index: -1;
+    animation: elevar 2s ease-in-out;
+}
+
+@keyframes elevar {
+    0% {
+        transform: translateX(-50%) translateY(200px); /* Mover solo verticalmente */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0px); /* Elevar solo verticalmente */
+    }
+}
+
+
+.memoria{
+    position: absolute;
+    bottom: 20%;
+    font-family: "Piedra", serif;
+    color: #1E1E1E;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3vw;
+    opacity: 40%;
+}
+#nombre{
+    position: absolute;
+    bottom: 15%;
+    font-family: "Ranchers", sans-serif;
+    color: #1E1E1E;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 6vw;
+    opacity: 70%;
+}
+#imagen{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 28%;
+    width: 17vw;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+    @media only screen and (max-width: 767px){
+        .papel_picado{
+            top: 0;
+        }
+        #ruleta{
+            width: 85vw;
+            height: 85vw;
+            filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+        }
+        .indicador{
+            width: 35vw;
+            top: 18%;filter: drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+        }
+        .C_centro{
+            top: 48%;
+            filter: drop-shadow(0 0 5px white) drop-shadow(0 0 5px white);
+        }
+        .contenedor_boton button{
+            width: 30vw;
+            height: 20vw;
+            font-size: 7vw;
+        }
+        .C_1, .C_2{
+            width: 43vw;
+        }
+        #descuento .boleto {
+            top: 55%;
+            width: 90vw;
+        }
+        .ajolote{
+            top: 32%;          
+            width: 60vw;
+        }
+        #descuento #titulo{
+            margin-top: 15%;
+        }
+        #descuento #des{
+            font-size: 12vw;
+            top: 50%;
+        }
+        .marco_giro{
+            width: 100%;
+            top: 10%;
+        }
+        .parca{
+            width: 50vw;
+        }
+        #giro h1{
+            font-size: 6vw;
+            width: 60vw;
+            top: 18%;
+        }
+        #giro button{
+            width: 60vw;
+            height: 15vw; 
+            top: 65%;
+            font-size: 7vw;
+        }
+        .cuadro{
+            filter: drop-shadow(0 0 2px white) drop-shadow(0 0 3px white);
+            border: 2px solid #fff;
+            top: 45%;
+        }
+        .titulo_cuadro{
+            margin-top: 50px;
+            font-size: 6vw;
+        }
+        
+        .img_ganado{
+            width: 35vw;
+            top: 35%;
+        }
+        .destello{
+            width: 65vw;
+            top: 25%;
+        }
+        
+        .gif{
+            width: 70vw;
+            border-radius: 20px;
+        }
+        .salir{
+            width: 15vw;
+            bottom: 2%;
+        }
+
+        .titulo_muerte{
+            font-size: 12vw;
+            
+        }
+        
+        .txt_muerte{
+            font-size: 6vw;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        .tumba{
+            width: 125vw;
+        }
+        
+        .parca2{
+            width: 60vw;
+            bottom: 35%;
+        }
+        
+        .memoria{
+            bottom: 22%;
+            font-size: 4vw;
+          
+        }
+        #nombre{       
+            bottom: 16%;
+            font-size: 7.5vw;
+          
+        }
+        #imagen{
+            bottom: 30%;
+            width: 25vw;
+        }
+    }

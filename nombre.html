@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calaveritas y Diablitos</title>
+    <link rel="stylesheet" href="nombre.css">
+</head>
+<body>
+    <div class="horizontal">
+        <label>Gira tu dispositivo</label>
+        <img src="Imagenes/craneo.gif" class="craneo">
+        <img src="Imagenes/marco1.jpg" class="marco">
+    </div>
+
+    <img src="Imagenes/marco_icon.png" class="marco">
+    <img id="imagen" alt="Imagen">
+
+    <h1>Nombre:</h1>
+
+    <input type="text" maxlength="7" id="nombre" required>
+
+<button id="boton" disabled>OK</button>
+
+<script>
+    const click = new Audio('sonidos/click.mp3');
+    let params = new URLSearchParams(window.location.search);
+    let icon = params.get('imagen');
+    document.getElementById('imagen').src = icon; 
+
+    document.getElementById('nombre').addEventListener('input', function() {
+        document.getElementById('boton').disabled = this.value.trim() === ''; 
+    });
+
+    document.getElementById('boton').onclick = function() {
+        click.play();
+        const nombre = document.getElementById('nombre').value.trim();
+
+        if (nombre !== '') {
+            window.location.href = `cargando.html?imagen=${encodeURIComponent(icon)}&nombre=${encodeURIComponent(nombre)}`;
+        }
+    };
+
+    const moustros = new Audio('sonidos/monstruos_tontos.mp3');
+    moustros.play();
+    moustros.loop = true;
+
+</script>
+
+</body>
+</html>

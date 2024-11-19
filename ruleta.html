@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calaveritas y Diablitos</title>
+    <link rel="stylesheet" href="ruleta.css">
+</head>
+<body>
+    <div class="horizontal">
+        <label>Gira tu dispositivo</label>
+        <img src="Imagenes/craneo.gif" class="craneo">
+        <img src="Imagenes/marco1.jpg" class="marco">
+    </div>
+
+    <img src="Imagenes/papel_picado.png" class="papel_picado">
+    <img src="Imagenes/indicador.png" class="indicador">
+    <img src="Imagenes/centro.png" class="C_centro">
+
+    <div class="contenedor_ruleta">
+
+        <div id="indicador"></div>
+  
+          <div id="ruleta"> 
+  
+            <div class="seccion">
+              <div class="contenido chocolate">
+                <p>Chocolate</p> 
+                <img src="Imagenes/chocolate-caliente.png" class="iconos">
+              </div>
+            </div>
+            <div class="seccion">
+              <div class="contenido muerte">
+                <p>Muerte</p> 
+                <img src="Imagenes/muerte.png" class="iconos">
+              </div>
+            </div>
+            <div class="seccion">
+              <div class="contenido descuento">
+                <p>Descuento</p>
+                <img src="Imagenes/descuento.png" class="iconos">
+              </div>
+            </div>
+            <div class="seccion">
+              <div class="contenido muerte2">
+                <p>Muerte</p>
+                <img src="Imagenes/muerte.png" class="iconos">
+              </div>
+            </div>
+            <div class="seccion">
+              <div class="contenido giro">
+                <p>Giro</p>
+                <img src="Imagenes/girar.png" class="iconos">
+              </div>
+            </div>
+            <div class="seccion">
+              <div class="contenido muerte3">
+                <p>Muerte</p>
+                <img src="Imagenes/muerte.png" class="iconos">
+              </div>
+            </div>
+            <div class="seccion">
+              <div class="contenido toppings">
+                <p>Toppings</p>
+                <img src="Imagenes/toppings.png" class="iconos">
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <div class="contenedor_boton">
+            <button id="boton">Girar</button>
+        </div>
+        
+        <img src="Imagenes/Calavera1.png" class="C_1">
+        <img src="Imagenes/Calavera2.png" class="C_2">
+
+
+
+        <div id="toppings" class="resultado" >     
+          <div class="cuadro">
+            <h1 class="titulo_cuadro">¡Doble sabor! Los muertos te han premiado.</h1>
+            <img src="Imagenes/toppings.png" class="img_ganado">
+            <img src="Imagenes/destello.png" class="destello">
+            <img src="Imagenes/diademuertos.gif" class="gif">
+          </div>
+          <img src="Imagenes/salir.png" class="salir" onclick="salir()">
+        </div>
+
+
+        <div id="muerte" class="resultado">
+          <h1 class="titulo_muerte">¡HAS MUERTO!</h1>
+          <h2 class="txt_muerte">¡Ay! Tu suerte fue peor que la de una calaverita de azúcar bajo el sol.</h2>
+          <img src="Imagenes/tumba.png" class="tumba">
+          <img src="Imagenes/parca.png" class="parca2">
+          <div id="nombre"></div>
+          <img id="imagen">
+          <h3 class="memoria">En Memoria de:</h3>
+          <h1 id="nombre"></h1>
+          <img src="Imagenes/salir.png" class="salir" onclick="salir()" style="opacity: 40%;">
+
+        </div>
+
+
+        <div id="giro" class="resultado">
+            <img src="Imagenes/marco_giro.png" class="marco_giro" style="display: block;">
+            <h1>¿Te atreves a desafiar a la muerte de nuevo?</h1>
+            <button id="boton_giro" onclick="girar()">Girar de nuevo</button>
+            <img src="Imagenes/parca.png" class="parca">
+        </div>
+
+
+        <div id="descuento" class="resultado">
+            <h1 id="titulo">¡Los espíritus te han bendecido!</h1>
+            <img src="Imagenes/ajolote.png" class="ajolote">
+            <img src="Imagenes/boleto.png" class="boleto">
+            <h1 id="des">15% OFF</h1>
+            <img src="Imagenes/salir.png" class="salir" onclick="salir()">
+        </div>
+      
+        <div id="chocolate" class="resultado">
+          <div class="cuadro">
+            <h1 class="titulo_cuadro">¡Los muertos te consienten con un chocolate caliente!</h1>
+            <img src="Imagenes/chocolate-caliente.png" class="img_ganado">
+            <img src="Imagenes/destello.png" class="destello">
+            <img src="Imagenes/diademuertos.gif" class="gif">
+          </div>
+          <img src="Imagenes/salir.png" class="salir" onclick="salir()">
+        </div>
+
+  
+    <script src="ruleta.js"></script>
+</body>
+</html>

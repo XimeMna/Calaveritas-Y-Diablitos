@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calaveritas y Diablitos</title>
+    <link rel="stylesheet" href="avatar.css">
+</head>
+<body>
+    <div class="horizontal">
+        <label>Gira tu dispositivo</label>
+        <img src="Imagenes/craneo.gif" class="craneo">
+        <img src="Imagenes/marco1.jpg" class="marco">
+    </div>
+
+    <h1>Elige tu Avatar</h1>
+
+    <div class="avatares">
+        <div class="avatar"><img class="marco" src="Imagenes/marco_avatar.png"><img class="icon" src="Imagenes/A_1.png"></div>
+        <div class="avatar"><img class="marco" src="Imagenes/marco_avatar.png"><img class="icon" src="Imagenes/A_2.png"></div>
+        <div class="avatar"><img class="marco" src="Imagenes/marco_avatar.png"><img class="icon" src="Imagenes/A_3.png"></div>
+        <div class="avatar"><img class="marco" src="Imagenes/marco_avatar.png"><img class="icon" src="Imagenes/A_4.png"></div>
+        <div class="avatar"><img class="marco" src="Imagenes/marco_avatar.png"><img class="icon" src="Imagenes/A_5.png"></div>
+    </div>
+
+    <a href="index.html"><img src="Imagenes/salir.png" class="salir"></a>
+
+    <script>
+        const elementosSalir = document.querySelectorAll('.salir');
+        const click = new Audio('sonidos/click.mp3');
+        const moustros = new Audio('sonidos/monstruos_tontos.mp3');
+        moustros.play();
+        moustros.loop = true;
+        
+        let elementos = document.querySelectorAll('.avatar');
+        let icon0 = "Imagenes/A_1.png";
+        let icon1 = "Imagenes/A_2.png";
+        let icon2 = "Imagenes/A_3.png";
+        let icon3 = "Imagenes/A_4.png";
+        let icon4 = "Imagenes/A_5.png";
+        elementos.forEach((elemento, index) => {
+        elemento.addEventListener('click', () => {
+             elemento.style.border = '1vw inset #fff';
+             click.play();
+            switch (index) {
+            case 0:
+                window.location.href = `nombre.html?imagen=${encodeURIComponent(icon0)}`;
+            break;
+            case 1:
+                window.location.href = `nombre.html?imagen=${encodeURIComponent(icon1)}`;
+            break;
+            case 2:
+                window.location.href = `nombre.html?imagen=${encodeURIComponent(icon2)}`;
+            break;
+            case 3:
+                window.location.href = `nombre.html?imagen=${encodeURIComponent(icon3)}`;
+            break;
+            case 4:
+                window.location.href = `nombre.html?imagen=${encodeURIComponent(icon4)}`;
+            break;
+            
+            }
+        });
+        });
+
+    
+        elementosSalir.forEach(elemento => {
+            elemento.addEventListener('touchend', () => {
+                click.play();
+            });
+        });
+
+    </script>
+</body>
+</html>

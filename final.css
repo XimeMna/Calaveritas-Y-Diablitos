@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lalezar&family=Luckiest+Guy&family=Outfit&family=Piedra&family=Ranchers&family=Salsa&display=swap');
+
+.ranchers-regular,.salsa-regular,.piedra-regular,.luckiest-guy-regular{
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ranchers-regular {
+    font-family: "Ranchers", sans-serif;
+}
+.salsa-regular {
+    font-family: "Salsa", cursive;
+}
+.piedra-regular {
+    font-family: "Piedra", serif;
+}
+.luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+}
+   
+body{
+    background-color: #1C0E3B;
+    border: 0;
+    margin: 0;
+    user-select: none;
+    letter-spacing: 0.2em;
+    background-image: url(Imagenes/fondo.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    
+}
+
+img{
+    filter: brightness(1.1) contrast(1.1) saturate(1.1); 
+}
+
+.horizontal{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 10;
+    top: 0;
+}
+.horizontal label,.horizontal .craneo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.horizontal label{
+    font-size: 4vw;
+    top: 35%;
+    font-family: "Ranchers", sans-serif;
+    color: #fff;
+}
+.horizontal .craneo{
+    width: 25vh;
+    top: 60%;
+    border-radius: 20%;
+}
+.horizontal .marco{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    top: 0;
+}
+@media only screen and (orientation: landscape) {
+        .horizontal{
+            display: flex;
+            position: fixed;
+        }
+        body{
+            overflow: hidden;
+        }
+        
+    }
+
+
+.uno, .dos, .tres, .cuatro{
+    position: absolute;
+}
+.uno{
+    left: 0;
+    width: 30vw;
+}
+
+.dos{
+    right: 0;
+    width: 40vw;
+}
+
+.tres{
+    bottom: 0;
+    left: 0;
+    width: 28vw;
+}
+
+.cuatro{
+    bottom: 0;
+    right: 0;
+    width: 35vw;
+}
+
+h1{
+    position: absolute;
+    color: #fff;
+    font-size: 5vw;
+    text-align: center;
+    font-family: "Ranchers", sans-serif;
+    margin: 0 30px 0 30px;
+    
+}
+
+h1:nth-of-type(1){
+   top: 30%;
+   
+}
+
+h1:nth-of-type(2){
+    top: 45%;
+}
+
+@media only screen and (max-width: 767px){
+
+    h1{
+        font-size: 6vw;
+    }
+    .uno{
+        width: 40vw;
+    }
+    .dos{
+        width: 48vw;
+    }
+    .tres{
+        width: 36vw;
+    }
+    .cuatro{
+        width: 45vw;
+    }
+}
